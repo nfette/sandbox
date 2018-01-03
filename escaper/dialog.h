@@ -17,12 +17,17 @@ public:
 
 private slots:
 
-    void on_lineEdit_textEdited(const QString &arg1);
+    void on_inputs_edited();
 
-    void on_lineEdit_2_textChanged(const QString &arg1);
+    void on_plainTextEdit_textChanged();
 
 private:
     Ui::Dialog *ui;
+
+    QString post(const QString &arg1, const QString &arg2);
+    QString post2(const QString &arg1, const QString &arg2);
+    void get(const QString &xml, QString &arg1, QString &arg2, QString &errorString);
+    void get2(const QString &xml, QString &arg1, QString &arg2, QString &errorString);
 };
 
 #endif // DIALOG_H

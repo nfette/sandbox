@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>402</width>
-    <height>166</height>
+    <width>539</width>
+    <height>419</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,19 +15,19 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QFormLayout" name="formLayout">
+    <layout class="QFormLayout" name="formLayout_3">
      <item row="0" column="0">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="label_1">
        <property name="text">
-        <string>Your text</string>
+        <string>Node text</string>
        </property>
        <property name="buddy">
-        <cstring>lineEdit</cstring>
+        <cstring>lineEdit_1</cstring>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="lineEdit_1">
        <property name="font">
         <font>
          <family>Courier New</family>
@@ -41,7 +41,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Escaped text</string>
+        <string>Attribute text</string>
        </property>
        <property name="buddy">
         <cstring>lineEdit_2</cstring>
@@ -61,58 +61,181 @@
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label_10">
        <property name="text">
-        <string>Unescaped text</string>
+        <string>Post with</string>
        </property>
        <property name="buddy">
-        <cstring>lineEdit_3</cstring>
+        <cstring>radioButton_1</cstring>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_3">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QRadioButton" name="radioButton_1">
+         <property name="text">
+          <string>XMLStreamWriter</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="text">
+          <string>QDomDocument</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>XML</string>
+       </property>
+       <property name="buddy">
+        <cstring>plainTextEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPlainTextEdit" name="plainTextEdit">
        <property name="font">
         <font>
          <family>Courier New</family>
         </font>
        </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
       </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Parsing errors</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>None yet</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>300</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Parsed with XMLStreamReader</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Node text</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_3</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_3">
+        <property name="font">
+         <font>
+          <family>Courier New</family>
+         </font>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Attribute text</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_4</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_4">
+        <property name="font">
+         <font>
+          <family>Courier New</family>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Parsing errors</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_error">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>None yet</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Parsed with QDomDocument</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Node text</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_5</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_5"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Attribute text</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_6</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_6"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Parsing errors</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_9">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>None yet</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
@@ -124,6 +247,17 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEdit_1</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>radioButton_1</tabstop>
+  <tabstop>radioButton_2</tabstop>
+  <tabstop>plainTextEdit</tabstop>
+  <tabstop>lineEdit_3</tabstop>
+  <tabstop>lineEdit_4</tabstop>
+  <tabstop>lineEdit_5</tabstop>
+  <tabstop>lineEdit_6</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -133,8 +267,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>200</x>
-     <y>126</y>
+     <x>209</x>
+     <y>266</y>
     </hint>
     <hint type="destinationlabel">
      <x>200</x>
